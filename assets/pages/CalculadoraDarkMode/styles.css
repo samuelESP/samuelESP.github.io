@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.fundo{
+    background-image: linear-gradient(45deg,#fac400, #ffffff);
+    height: 100vh;
+    color: #daa520;
+    font-family: 'Bebas Neue';
+    text-align: center;
+}
+.h3{
+    letter-spacing: 10px;
+}
+.calculadora{
+    position: absolute;
+    background-color: rgba(211, 204, 177, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+}
+.botao{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: #daa520;
+}
+.botao:hover{
+    background-color: #8a6e29;
+    color: #fff;
+}
+#resultado{
+    background-color: #8a6e29;
+    width: 207px;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: right;
+    padding: 5px;
+}
+
+
+
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+.slider {
+    background-color: #8a6e29;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: .5s;
+    border-radius: 30px;
+  }
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+    background: var(--background);
+    transition: .5s;
+  }
+input:checked + .slider {
+    
+    background-color: #9f8fbf;
+  }
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    
+  }
+
+/*#28096b*/
+
+
+
+
+
+.fundo.dark-mode{
+    background-image: linear-gradient(45deg,#09011a, #765cab);
+    color:  rgb(101, 90, 126);
+}
+.calculadora.dark-mode{
+    background-color: rgba(3, 3, 17, 0.8);
+}
+.botao.dark-mode{
+    background-color: rgb(101, 90, 126);
+    color: #17063a;
+}
+.botao.dark-mode:hover{
+    background-color:#17063a;
+    color:  rgb(101, 90, 126);
+}
+#resultado.dark-mode{
+    background-color:#17063a;
+    color:  rgb(101, 90, 126);
+}

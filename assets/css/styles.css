@@ -276,7 +276,70 @@ a{
 /*Projetos*/
 #bottom{
     background-color: #333336;
+    padding-bottom: 100px;
 }
+#bottom h1{
+    font-family:'Press Start 2P','Lato' ;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 50px 0;
+}
+.bottomContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottomContainer .imagens{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr;
+    gap: 180px;
+    text-align: center;
+}
+.imagens a{
+    height: 600px;
+    background-color: #FFF;
+    border-radius: 20px;
+    opacity: .7;
+    color: #09011a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.bottomContainer img{
+    width: 380px;
+    height: 330px;
+    border-radius: 20px;
+}
+
+.imagens h2{
+    font-size: 3rem;
+}
+.imagens p{
+    font-size: 1.3rem;
+    width: 90%;
+}
+.embreve p{
+    color: #fff;
+    background-color: #09011a;
+    width: 800px;
+    text-align: center;
+    padding: 5% 0;
+    transform: rotate(-60deg);
+    transition: 1s;
+}
+.embreve p:hover{
+    letter-spacing: 10px;
+}
+
+
+
 
 
 @media screen and (max-width: 1180px) {
@@ -398,6 +461,42 @@ a{
         justify-content: space-evenly;
         column-gap: 10px;
     }
-    
+    /*Projetos*/
+    #bottom h1{
+        font-size: 1.3rem;
+    }
+    .bottomContainer .imagens{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomContainer a{
+        width: 300px;
+    }
+    .bottomContainer img{
+        width: 280px;
+        height: 200px;
+    }
+    .imagens h2{
+        font-size: 2rem;
+    }
+    .imagens h3{
+        width: 90%;
+    }
+    .imagens p{
+        font-size: 1rem;
+    }
+    .imagens a{
+        height: 480px;
+        justify-content: space-around;
+    }
+    .embreve{
+        position: relative;
+    }
+    .embreve p{
+        position: absolute;
+        top: 50%;
+        left: -90%;
+        transform: rotate(-58deg);
+    }
 }
     
