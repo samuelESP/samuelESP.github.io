@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Dio Page</title>
+    <style>
+        body{
+            background-color: #09011a;
+            color: #fff;
+            font-family: 'Lato', 'Press Start 2P';
+        }
+        a{
+            text-decoration: none;
+        }
+        .page{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video{
+            width: 100%;
+        }
+        .msg h1{
+            font-family: 'Press Start 2P', 'Lato';
+        }
+        .msg h2{
+            font-family: 'Press Start 2P', 'Lato';
+        }
+        .msg li{
+            list-style-type: square;
+        }
+        .msg a{
+            color: #c50808;
+        }
+        .botao{
+            margin: 50px 0 16px 0;
+            position: relative;
+        }
+        .botao .open{
+            padding: 20px;
+            background-color: #fff;
+            color: #09011a;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        .open.style{
+            display: none;
+        }
+        .botao a{
+            transition: .8s;
+        }
+        .botao a:hover{
+            background-color: #765cab;
+            color: #fff;
+        }
+        .confirm{
+            position: absolute;
+            display: none;
+            align-items: center;
+            gap: 30px;
+            transition: 2s;
+            top: -40px;
+            left: 10px;
+        }
+        .confirm.style{
+            display: flex;
+        }
+        .confirm a{
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 20px;
+            width: 35px;
+            gap: 10px;
+            color: #09011a;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="container">
+            <div class="msg">
+                <h1>Sobre</h1>
+                <p>Esse site(página DIO) consiste em 3 diferentes páginas, sendo eles:</p>
+                <ul>
+                    <li>Página Home</li>
+                    <li>Página Cadastro</li>
+                    <li>Página Login</li>
+                    <li>Página de Feed</li>
+                    
+                </ul>
+                <p>A página de Home apenas possui botões que consegue levar o usuário para as outras páginas</p>
+                <p>A página de Cadastro recebe uma validação de nome de usuário, e-mail e senha, que quando não aceitas devolvem uma mensagem de erro</p>
+                <p>OBS: A página não aceita novos usuário</p>
+                <p>A página de Login simula uma API usando <a href="https://www.npmjs.com/package/json-server">JSON-server</a>, caso, as informações corretas são passadas se consegue entrar na página de Feed do usuário</p>
+                <p>Informações corretas:<br> pablo@email.com/senha: 1234<br>amanda@email.com/senha: 4567</p>
+                <h2>Usa-se</h2>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>HTML</li>
+                    <li>React</li>
+                    <li>Styled-compoents</li>
+                    <li>HookForms(yup)</li>
+                </ul>
+            </div>
+            <video controls="" autoplay="none" name="media">
+                <source src="video/React-App.webm" type="video/webm">
+            </video>
+            <div id='here' class="botao">
+
+                <a class="open" onclick="certeza()">ir para repositório</a>
+                <div class='confirm'>
+                    <h2>Tem certeza?</h2>
+                    <div>
+                        <a href="https://github.com/samuelESP/Consulta_JS/tree/main/17_React/primeiro_Projeto/second/dio" target="_blank" class="sim" onclick="escolha()">Sim</a>
+                        <a href="#here" class="nao" onclick="escolha()">Não</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    const open = document.querySelector('.open');
+    const confirmed = document.querySelector('.confirm')
+    const yes = document.querySelector('.sim');
+    const no = document.querySelector('.nao');
+    function certeza() {
+        
+        open.classList.toggle('style');
+        confirmed.classList.toggle('style');
+    }
+    function escolha() {
+        open.classList.remove('style');
+        confirmed.classList.remove('style');
+    }
+</script>
+</html>
