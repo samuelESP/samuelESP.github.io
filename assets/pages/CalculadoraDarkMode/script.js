@@ -3,6 +3,9 @@ function insert(num)
             var numero = document.getElementById('resultado').innerHTML;
             document.getElementById('resultado').innerHTML = numero + num;
             //Quando eu clicar no meu botão ele vai adicionar ele dentro do meu visor e depois adicinar meu anterior também junto dele
+            if (numero.length > 20) {   
+                document.getElementById('resultado').innerHTML = 'Excesso de caracteres';
+            }
         }
         function clean()
         {
@@ -24,14 +27,21 @@ function insert(num)
             var resultado = document.getElementById('resultado').innerHTML;
             if(resultado)//Se houver algo dentro do meu resultado ele ira executar:
             {
-                document.getElementById('resultado').innerHTML = eval(resultado);
-                //O Eval é uma função que faz calculo com strings, permitindo assim calcular o meu resultado
+                try {
+                    document.getElementById('resultado').innerHTML = eval(resultado);
+                    //O Eval é uma função que faz calculo com strings, permitindo assim calcular o meu resultado
+                } catch (e) {
+                    document.getElementById('resultado').innerHTML = 'Cálculo indisponível';
+
+                }
+               
             }
             else
             {
                 document.getElementById('resultado').innerHTML = "Nada..."
             }
         }
+        
 
 
         
