@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+body{
+    background-color: #add8e6;
+}
+canvas{
+    height: 180px;
+    width: 280px;
+}
+
+.cabecalho{
+    background-color: #8babb6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+.cabecalho .left{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.cabecalho .rigth{
+    position: relative;
+}
+.cabecalho .rigth  input{
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+.cabecalho .rigth img{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.detalhes div, .Total{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.detalhes .det{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detalhes .det h2, .Total h2{
+    font-size: 2.5rem;
+}
+
+.detalhes .det span, .Total span{
+    font-size: 1.5rem;
+}
+
+.detalhes .det button{
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    background-color: #aaaaaa;
+    color: #070707;
+    font-size: 18px;
+    transition: all 0.8s;
+}
+.detalhes .det button:hover{
+    transform: scale(1.08);
+    background-color: #111111;
+    color: #ffffff;
+}
+
+
+.detalhes .icomespan{
+    color: #00FF00;
+}
+.detalhes .expensesspan{
+    color: #fa2b2b;
+}
+
+.detalhes .taxspan{
+    color: #1882fc;
+}
+
+.detalhes input{
+    outline: none;
+}
+
+
+
+@media screen and (min-width: 769px) {
+    .detalhes, .Total{
+        width: 400px;
+    }
+    
+}

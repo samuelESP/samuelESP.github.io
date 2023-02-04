@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;500&display=swap" rel="stylesheet">
+
+    <title>Dashboard</title>
+</head>
+<body>
+    <main class="main">
+
+        <header class="cabecalho">
+            <div class="left">
+                <img src="imgs/notas.png" alt="icone de notas de dinheiro">
+                <span>SEU DINHEIRO</span>
+            </div>
+            
+            <div class="rigth">
+                <img src="imgs/pesquisar.svg" alt="icone de pesquisa">
+                <input type="text" name="" id="" disabled>
+            </div>
+            
+        </header>
+
+        <div class="container">
+            <div class="detalhes">
+                
+                
+                <div class="income det">
+                    <h2>Income</h2>
+                    <input type="text" name="" id="" class="valordeIncome" placeholder="Value on USD">
+                    
+                    <select name="mouth" id="monthsI">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+
+                    <button class="btnIncome">Inserir Valor</button>
+                    <span>Value in USD: <span class="icomespan">$22160.000</span></span>
+                    <canvas id="MyIncone"></canvas>
+                </div>
+
+
+                <div class="Expenses det">
+                    <h2>Expenses</h2>
+                    <input type="text" name="" id="" class="valordeExpenses" placeholder="Value on USD">
+
+                    <select name="mouth" id="monthsE">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+
+                    <button class="btnExpenses">Inserir Valor</button>
+                    <span>Value in USD: <span class="expensesspan">$17493.000</span></span>
+                    <canvas id="MyExpenses"></canvas>
+                </div>
+
+
+                <div class="Tax det">
+                    <h2>Tax(IRF)</h2>
+                    <span>Value in USD: <span class="taxspan"></span></span>
+                    <canvas id="MyTax"></canvas>
+                </div>
+
+
+            </div>
+            <div class="Total">
+                <h2>Total in the year</h2>
+                <span>Total in USD/Year: <span class="TotalSpan"></span></span>
+                <canvas id="SavedChart" class="TotalCanvas"></canvas>
+            </div>
+        </div>
+    </main>    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="script.js"></script>
+</body>
+</html>
